@@ -11,7 +11,12 @@ public class Log
 	public static final String OUT_DIR = "out";
 	public static final String FILE_EXTENSION = ".txt";
 
-	private static final String FLD_DEBUG = "-agentlib:jdwp";
+	private static final String FLD_MSG = "MSG";
+	private static final String FLD_INF = "INF";
+	private static final String FLD_ERR = "ERR";
+	private static final String FLD_DBG = "DBG";
+
+	private static final String VALUE_DEBUG = "-agentlib:jdwp";
 
 	private static final String MSG_FILE_WASNT_CREATED = "file 'out' wasn't created";
 	private static final String MSG_EXCEPTION_IS_NULL = "Exception is null";
@@ -45,23 +50,23 @@ public class Log
 
 	public static void msg(String msg)
 	{
-		printOut(msg);
+		printOut(FLD_MSG + CHR_COLON_SPACE + msg);
 	}
 
 	public static void info(String info)
 	{
-		printOut(info);
+		printOut(FLD_INF + CHR_COLON_SPACE + info);
 	}
 
 	public static void debug(String debug)
 	{
 		if (isDebug())
-			printOut(debug);
+			printOut(FLD_DBG + CHR_COLON_SPACE + debug);
 	}
 
 	public static void err(String err)
 	{
-		printErr(err);
+		printErr(FLD_ERR + CHR_COLON_SPACE + err);
 	}
 
 	public static void err(Exception e)
@@ -103,6 +108,6 @@ public class Log
 	private static boolean isDebug()
 	{
 		return java.lang.management.ManagementFactory.getRuntimeMXBean().getInputArguments().toString()
-				.indexOf(FLD_DEBUG) > 0;
+				.indexOf(VALUE_DEBUG) > 0;
 	}
 }

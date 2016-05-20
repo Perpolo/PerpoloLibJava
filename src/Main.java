@@ -16,7 +16,7 @@ public class Main
 		Log.msg("helo!?");
 		Log.err("ziomizom!");
 		Log.info("");
-		Log.debug("");
+		Log.debug("debag dziala");
 
 		Log.msg("helo!?");
 		Log.err(e);

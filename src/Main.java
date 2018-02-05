@@ -23,7 +23,7 @@ public class Main
 		Log.err("nie dziala bolek", e);
 
 		Log.info("");
-		//Log.debug("");
+		Log.debug("");
 
 	}
 }

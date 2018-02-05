@@ -12,7 +12,7 @@ public class Main
 		System.out.println(isDebug);
 
 		Exception e = null;
-
+u
 		Log.msg("helo!?");
 		Log.err("ziomizom!");
 		Log.info("");

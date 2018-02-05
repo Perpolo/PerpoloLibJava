@@ -22,7 +22,7 @@ u
 		Log.err(e);
 		Log.err("nie dziala bolek", e);
 
-		Log.info("");
+		Log.info("");sdf
 		////uuudwLedasdasdsadsfsdrwfsdsdfetyerterog.debsdfsdfug("");
 
 	}
